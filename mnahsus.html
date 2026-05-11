@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portofolio Herry</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body{
+      background: linear-gradient(135deg,#0f172a,#1e293b,#312e81);
+      min-height:100vh;
+      overflow-x:hidden;
+      color:white;
+    }
+
+    .background{
+      position:fixed;
+      width:100%;
+      height:100%;
+      overflow:hidden;
+      z-index:-1;
+    }
+
+    .circle{
+      position:absolute;
+      border-radius:50%;
+      background:rgba(255,255,255,0.08);
+      animation: float 10s infinite linear;
+    }
+
+    .circle:nth-child(1){
+      width:200px;
+      height:200px;
+      left:10%;
+      top:20%;
+    }
+
+    .circle:nth-child(2){
+      width:300px;
+      height:300px;
+      right:5%;
+      top:10%;
+      animation-duration:15s;
+    }
+
+    .circle:nth-child(3){
+      width:150px;
+      height:150px;
+      bottom:10%;
+      left:30%;
+      animation-duration:12s;
+    }
+
+    @keyframes float{
+      0%{transform:translateY(0px) rotate(0deg);}
+      50%{transform:translateY(-30px) rotate(180deg);}
+      100%{transform:translateY(0px) rotate(360deg);}
+    }
+
+    .container{
+      width:90%;
+      max-width:1100px;
+      margin:auto;
+      padding:40px 0;
+    }
+
+    .card{
+      background:rgba(255,255,255,0.08);
+      backdrop-filter:blur(12px);
+      border:1px solid rgba(255,255,255,0.2);
+      border-radius:25px;
+      padding:35px;
+      margin-bottom:30px;
+      animation: fadeIn 1s ease;
+      box-shadow:0 10px 30px rgba(0,0,0,0.3);
+      transition:0.4s;
+    }
+
+    .card:hover{
+      transform:translateY(-8px) scale(1.01);
+      box-shadow:0 15px 40px rgba(0,0,0,0.5);
+    }
+
+    @keyframes fadeIn{
+      from{opacity:0;transform:translateY(40px);}
+      to{opacity:1;transform:translateY(0);}
+    }
+
+    .hero{
+      text-align:center;
+      padding:50px 20px;
+    }
+
+    /* FOTO PROFIL */
+    .profile-img{
+      width:160px;
+      height:160px;
+      border-radius:50%;
+      object-fit:cover;
+      border:5px solid rgba(255,255,255,0.3);
+      margin-bottom:20px;
+      box-shadow:0 0 25px rgba(255,255,255,0.2);
+      transition:0.4s;
+    }
+
+    .profile-img:hover{
+      transform:scale(1.05);
+      box-shadow:0 0 35px rgba(192,132,252,0.5);
+    }
+
+    .hero h1{
+      font-size:55px;
+      margin-bottom:10px;
+      background:linear-gradient(to right,#60a5fa,#c084fc);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+
+    .hero p{
+      font-size:20px;
+      opacity:0.9;
+    }
+
+    .info-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:20px;
+      margin-top:25px;
+    }
+
+    .info-box{
+      background:rgba(255,255,255,0.06);
+      padding:20px;
+      border-radius:18px;
+      transition:0.3s;
+    }
+
+    .info-box:hover{
+      background:rgba(255,255,255,0.12);
+      transform:scale(1.03);
+    }
+
+    .info-box h3{
+      margin-bottom:10px;
+      color:#93c5fd;
+    }
+
+    .section-title{
+      font-size:30px;
+      margin-bottom:20px;
+      color:#c4b5fd;
+    }
+
+    .about{
+      line-height:1.9;
+      font-size:17px;
+      opacity:0.95;
+    }
+
+    .quote{
+      text-align:center;
+      font-size:24px;
+      font-style:italic;
+      color:#f9a8d4;
+    }
+
+    footer{
+      text-align:center;
+      padding:30px;
+      opacity:0.7;
+      font-size:14px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="background">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+  </div>
+
+  <div class="container">
+
+    <div class="card hero">
+
+      <!-- FOTO PROFIL -->
+      <img src="herry.jpg" alt="Foto Profil" class="profile-img">
+
+      <h1>Herry Ichsan Nuril</h1>
+      <p>Portofolio Digital Siswa TKJ</p>
+    </div>
+
+    <div class="card">
+      <h2 class="section-title">Informasi Pribadi</h2>
+
+      <div class="info-grid">
+        <div class="info-box"><h3>Nama</h3><p>Herry Ichsan Nuril</p></div>
+        <div class="info-box"><h3>Umur</h3><p>16 Tahun</p></div>
+        <div class="info-box"><h3>Kelas</h3><p>X TKJ 2</p></div>
+        <div class="info-box"><h3>Makanan Kesukaan</h3><p>Ayam</p></div>
+        <div class="info-box"><h3>Cita-Cita</h3><p>Dokter</p></div>
+        <div class="info-box"><h3>Tanggal Lahir</h3><p>23 March 2010</p></div>
+        <div class="info-box"><h3>Tempat Tinggal</h3><p>Jln. Tamalate 1</p></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2 class="section-title">Alasan Masuk TKJ</h2>
+      <p class="about">
+        Saya ingin masuk TKJ karena saya ingin belajar koding,
+        memahami jaringan komputer, dan mengembangkan kemampuan
+        di bidang teknologi informasi.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2 class="section-title">Tentang Saya</h2>
+
+      <p class="about">
+        Saya adalah siswa kelas 10 jurusan TKJ yang memiliki minat dalam dunia teknologi.
+        Saya memilih TKJ karena ingin belajar jaringan, perakitan komputer, dan coding.
+      </p>
+
+      <br>
+
+      <p class="about">
+        Saya ingin terus berkembang dan menambah pengalaman di bidang IT untuk masa depan.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2 class="section-title">Motivasi</h2>
+
+      <div class="quote">
+        "Jatuh itu biasa, bangkit itu pilihan"
+      </div>
+    </div>
+
+    <footer>
+      © 2026 Portofolio Digital Herry Ichsan Nuril
+    </footer>
+
+  </div>
+
+</body>
+</html>
