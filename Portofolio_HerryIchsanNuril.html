@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portofolio Herry</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #050505;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at top right, rgba(0,255,200,0.15), transparent 30%),
+                  radial-gradient(circle at bottom left, rgba(0,140,255,0.15), transparent 30%);
+      z-index: -1;
+      animation: bgMove 8s infinite alternate ease-in-out;
+    }
+
+    @keyframes bgMove {
+      from { transform: scale(1) rotate(0deg); }
+      to { transform: scale(1.1) rotate(2deg); }
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 0;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      animation: fadeIn 2s ease;
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      font-weight: 700;
+      background: linear-gradient(90deg, #00ffe1, #008cff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 20px rgba(0,255,225,0.3);
+    }
+
+    .hero p {
+      margin-top: 10px;
+      font-size: 1.2rem;
+      color: #ccc;
+    }
+
+    .scroll {
+      margin-top: 40px;
+      font-size: 14px;
+      color: #777;
+      animation: bounce 2s infinite;
+    }
+
+    .profile-img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #00ffe1;
+      box-shadow: 0 0 20px rgba(0,255,225,0.3);
+      margin-bottom: 20px;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(10px); }
+    }
+
+    .card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 25px;
+      padding: 30px;
+      margin-top: 30px;
+      transition: 0.4s ease;
+      animation: fadeUp 1s ease;
+      box-shadow: 0 0 25px rgba(0,255,225,0.08);
+    }
+
+    .card:hover {
+      transform: translateY(-8px) scale(1.01);
+      box-shadow: 0 0 35px rgba(0,255,225,0.2);
+    }
+
+    .card h2 {
+      color: #00ffe1;
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+
+    .info {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .box {
+      background: rgba(255,255,255,0.03);
+      padding: 20px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .box h3 {
+      color: #00bfff;
+      margin-bottom: 8px;
+    }
+
+    .motivation {
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #00ffe1;
+      margin-top: 15px;
+    }
+
+    .about {
+      line-height: 1.9;
+      color: #ddd;
+      font-size: 1.05rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #666;
+      font-size: 14px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .typing {
+      overflow: hidden;
+      border-right: .15em solid #00ffe1;
+      white-space: nowrap;
+      animation: typing 4s steps(30, end), blink .8s infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.5rem; }
+      .hero p { font-size: 1rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="hero">
+
+    <!-- FOTO DI SINI -->
+    <img src="Herry.jpg" alt="Foto Herry" class="profile-img">
+
+    <h1 class="typing">Herry Ichsan Nuril</h1>
+    <p>Portofolio Digital • TKJ • Future Doctor</p>
+    <div class="scroll">Scroll Kebawah</div>
+  </section>
+
+  <div class="container">
+
+    <div class="card">
+      <h2>Informasi Diri</h2>
+      <div class="info">
+
+        <div class="box">
+          <h3>Nama</h3>
+          <p>Herry Ichsan Nuril</p>
+        </div>
+
+        <div class="box">
+          <h3>Umur</h3>
+          <p>16 Tahun</p>
+        </div>
+
+        <div class="box">
+          <h3>Kelas</h3>
+          <p>X TKJ 2</p>
+        </div>
+
+        <div class="box">
+          <h3>Makanan Kesukaan</h3>
+          <p>Ayam</p>
+        </div>
+
+        <div class="box">
+          <h3>Cita-Cita</h3>
+          <p>Dokter</p>
+        </div>
+
+        <div class="box">
+          <h3>Tanggal Lahir</h3>
+          <p>23 March 2010</p>
+        </div>
+
+        <div class="box">
+          <h3>Tempat Tinggal</h3>
+          <p>Jln. Tamalate 1</p>
+        </div>
+
+        <div class="box">
+          <h3>Alasan Masuk TKJ</h3>
+          <p>Saya ingin masuk TKJ karena saya ingin belajar koding</p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Motivasi</h2>
+      <div class="motivation">
+        “Jatuh Itu Biasa, Bangkit Itu Pilihan”
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Tentang Saya</h2>
+      <p class="about">
+        Saya adalah siswa kelas 10 jurusan TKJ (Teknik Komputer dan Jaringan) yang memiliki minat dalam dunia teknologi dan komputer. Saya memilih jurusan TKJ karena ingin belajar lebih dalam tentang jaringan, perakitan komputer, dan coding.
+        <br><br>
+        Saya termasuk orang yang ingin terus berkembang, belajar hal baru, dan menambah pengalaman di bidang IT. Dengan masuk jurusan TKJ, saya berharap bisa memiliki kemampuan yang berguna untuk masa depan dan mencapai cita-cita yang saya inginkan.
+      </p>
+    </div>
+
+  </div>
+
+  <footer>
+    © 2026 Portofolio Digital Herry Ichsan Nuril
+  </footer>
+
+</body>
+</html>
